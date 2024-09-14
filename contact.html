@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <Title>VTHaxs</Title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <title>VTHaxs</title> <!-- Corrected title tag casing -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left">
+                <h2>Contact Us</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="5e8891b5-b76b-4993-936a-3543ced90e34">
+            <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+
+            <div class="button-container">
+                <button type="submit" class="contact-button">Submit</button>
+            </div>
+        </form>
         <ul id="navbar">
             <li><a href="map.html">Map</a></li>
-            <li><a href="about.htlm">About Us</a></li>
+            <li><a href="about.html">About Us</a></li> <!-- Fixed typo here -->
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
-    </body>
+    </div>
+</body>
 
 </html>

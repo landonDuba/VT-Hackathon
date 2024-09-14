@@ -106,3 +106,91 @@ body {
         border-color: transparent;
     }
 }
+
+/* Existing CSS code... */
+
+/* Contact form container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* Full height minus navbar */
+    padding: 20px;
+}
+
+/* Contact form */
+form {
+    background-color: #374157;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Ensure form is responsive */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.contact-left h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Styling for inputs and text area */
+.contact-inputs {
+    width: calc(100% - 24px); /* Adjust width to fit container */
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #2f3542;
+    color: white;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: all 0.3s ease;
+}
+
+/* Restrict width resizing and allow height adjustment only for the textarea */
+.contact-inputs[type="textarea"] {
+    resize: vertical; /* Allow vertical resizing only */
+    overflow: auto; /* Ensure scrolling if content overflows */
+    min-height: 100px; /* Minimum height */
+    width: 100%; /* Ensure width fits within container */
+}
+
+/* Container for the submit button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space between message box and button */
+}
+
+/* Submit button specific to Contact Us page */
+.contact-button {
+    width: auto; /* Adjust width to content */
+    padding: 12px 20px; /* Adjust padding as needed */
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #bc8f8f;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #e58f8f;
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Navbar styling remains the same */
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
