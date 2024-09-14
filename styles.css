@@ -87,7 +87,8 @@ body {
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid #bc8f8f; /* Cursor effect */
-    animation: blink-cursor 0.8s steps(2, start) infinite;
+    animation: 
+        blink-cursor 0.8s steps(2, start) infinite;
     vertical-align: bottom; /* Align the changing word with the sentence */
     color: #bc8f8f; /* Change the color of the changing word */
 }
@@ -107,90 +108,68 @@ body {
     }
 }
 
-/* Existing CSS code... */
-
-/* Contact form container */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 50px); /* Full height minus navbar */
-    padding: 20px;
-}
-
-/* Contact form */
-form {
-    background-color: #374157;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 500px; /* Ensure form is responsive */
-    overflow: hidden; /* Prevent overflow */
-}
-
-.contact-left h2 {
+p {
     color: white;
-    margin-bottom: 20px;
-    font-size: 28px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box {
+    width: 275px;
+    height: 500px;
+    font-size: 1em; /* Adjust font size as needed */
     text-align: center;
-}
-
-/* Styling for inputs and text area */
-.contact-inputs {
-    width: calc(100% - 24px); /* Adjust width to fit container */
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #2f3542;
-    color: white;
-    outline: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    transition: all 0.3s ease;
-}
-
-/* Restrict width resizing and allow height adjustment only for the textarea */
-.contact-inputs[type="textarea"] {
-    resize: vertical; /* Allow vertical resizing only */
-    overflow: auto; /* Ensure scrolling if content overflows */
-    min-height: 100px; /* Minimum height */
-    width: 100%; /* Ensure width fits within container */
-}
-
-/* Container for the submit button */
-.button-container {
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
-    justify-content: center; /* Center the button horizontally */
-    margin-top: 20px; /* Space between message box and button */
+    flex-direction: column;
+    overflow: hidden;
+    border: 3px solid white; /* Add border here */
 }
 
-/* Submit button specific to Contact Us page */
-.contact-button {
-    width: auto; /* Adjust width to content */
-    padding: 12px 20px; /* Adjust padding as needed */
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #bc8f8f;
-    border: none;
-    border-radius: 10px;
+
+.box:hover {
+    transform: scale(1.03); /* Make the button slightly larger on hover */
+    border-color: #202d4d; /* Optional: Change border color on hover */
+}
+
+.image-container {
+    flex: 1;
+    background-color: #f0f0f0; /* Light background for images */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+    flex: 1;
+    background-color: #374157; /* Background color for text area */
+    padding: 10px;
+}
+
+.text-container p {
+    margin: 0;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.contact-button:hover {
-    background-color: #e58f8f;
-    transform: scale(1.05); /* Subtle hover effect */
+.box h3, h5 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar styling remains the same */
-
-/* Responsiveness for smaller screens */
-@media (max-width: 768px) {
-    form {
-        padding: 20px;
-        max-width: 90%;
-    }
+.mission {
+    text-align: center;  
+    margin: 10px 0 40px 0; /* Add top margin to create space below the navbar */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
