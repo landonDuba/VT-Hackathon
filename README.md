@@ -1,14 +1,5 @@
 This project applies the Random Forest machine learning technique to generate safety ratings for different roads. By analyzing historical crash data, road conditions, traffic density, and other relevant factors, the model predicts road safety levels. The purpose is to help users make informed travel decisions by identifying safer routes.
 
-Table of Contents
-Overview
-Data
-Model
-Results
-Contributing
-License
-Overview
-The system assigns safety ratings to road segments based on several key factors:
 
 Historical crash statistics
 Road types (e.g., highways, urban streets, rural roads)
