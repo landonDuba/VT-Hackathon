@@ -30,11 +30,7 @@ button:hover {
     border-color: #bc8f8f; /* Optional: Change border color on hover */
 }
 
-/* Map Styles */
-#map {
-    height: calc(100vh - 50px); 
-    width: 100%;
-}
+
 
 #navbar {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -269,4 +265,40 @@ form {
         padding: 20px;
         max-width: 90%;
     }
+}
+
+
+/* Container for the content section */
+.content-section {
+    margin-top: 80px; /* Add space below the navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Row styling */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+/* Text container inside the box */
+.text-container2 {
+    flex: 1;
+    background-color: #374157; /* Background color for text area */
+    padding: 10px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center; /* Center text within the box */
+}
+
+.text-container2 p {
+    margin: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
