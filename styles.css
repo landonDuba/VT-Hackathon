@@ -30,7 +30,11 @@ button:hover {
     border-color: #bc8f8f; /* Optional: Change border color on hover */
 }
 
-
+/* Map Styles */
+#map {
+    height: calc(100vh - 50px); 
+    width: 100%;
+}
 
 #navbar {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

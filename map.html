@@ -1,42 +1,111 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Safe Routes</title>
-        <style>
-            #map {
-                height: 500px;
-                width: 100%;
-            }
-        </style>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkRAXLP9mdKxj7459HpYU-IiLiCXyS2Oc&callback=initMap" async defer></script>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" type="image/png" href="map.png" sizes="32x32">
-    </head>
-
-    <body>
-
-        <ul id="navbar">
-            <li class="home">
-                <a href="main.html">
-                    <img src="map.png" alt="favicon" class="favicon-icon"> Home
-                </a>
-            </li>
-            <div class="links">
-                <li><a href="map.html">Map</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </div>
-        </ul>
-
-        <div id="map"></div>
-    <script>
-        function initMap() {
-            new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 37.7749, lng: -122.4194 }, // Example: San Francisco coordinates
-                zoom: 12
-            });
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Routes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="map.png" sizes="32x32">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-    </script>
 
-    </body>
-    </html>
+        /* Navbar styles */
+        #navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+            height: 50px;
+        }
+
+        #navbar li {
+            float: left;
+        }
+
+        #navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #navbar li a:hover {
+            background-color: #111;
+        }
+
+        .favicon-icon {
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* Adjust the map and controls */
+        .controls-container {
+            padding: 10px;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center; /* Centers the items vertically */
+            justify-content: space-between; /* Spreads items horizontally */
+        }
+
+        .controls-container input {
+            width: 30%; /* Adjust the width of the input fields */
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        /* New elements for distance and duration */
+        .info-box {
+            font-size: 16px;
+            white-space: nowrap; /* Prevents the text from wrapping */
+            margin-left: 10px;
+        }
+
+        #map {
+            height: calc(100% - 130px); /* Adjusted to fit below navbar and input controls */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="navbar">
+        <li class="home">
+            <a href="main.html">
+                <img src="map.png" alt="favicon" class="favicon-icon"> Home
+            </a>
+        </li>
+        <div class="links">
+            <li><a href="map.html">Map</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </div>
+    </ul>
+
+    <div class="controls-container">
+        <input id="start" type="text" placeholder="Choose Starting Point">
+        <input id="end" type="text" placeholder="Choose Destination">
+        <span class="info-box">
+            <strong>Distance:</strong> <span id="distance">N/A</span>, 
+            <strong>Duration:</strong> <span id="duration">N/A</span>
+        </span>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkRAXLP9mdKxj7459HpYU-IiLiCXyS2Oc&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>
+
+
