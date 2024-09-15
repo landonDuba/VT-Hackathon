@@ -137,7 +137,7 @@ p {
 
 .box:hover {
     transform: scale(1.03); /* Make the button slightly larger on hover */
-    border-color: #202d4d; /* Optional: Change border color on hover */
+    border: 5px solid white; /* Add border here */
 }
 
 .image-container {
