@@ -13,7 +13,6 @@
            font-family: Arial, sans-serif;
        }
 
-
        /* Navbar styles */
        #navbar {
            list-style-type: none;
@@ -24,11 +23,9 @@
            height: 50px;
        }
 
-
        #navbar li {
            float: left;
        }
-
 
        #navbar li a {
            display: block;
@@ -38,18 +35,15 @@
            text-decoration: none;
        }
 
-
        #navbar li a:hover {
            background-color: #111;
        }
-
 
        .favicon-icon {
            height: 20px;
            margin-right: 8px;
            vertical-align: middle;
        }
-
 
        /* Adjust the map and controls */
        .controls-container {
@@ -63,14 +57,12 @@
            justify-content: space-between; /* Spreads items horizontally */
        }
 
-
        .controls-container input {
            width: 30%; /* Adjust the width of the input fields */
            padding: 10px;
            margin: 5px;
            font-size: 16px;
        }
-
 
        /* New elements for distance and duration */
        .info-box {
@@ -79,7 +71,6 @@
            margin-left: 10px;
        }
 
-
        #map {
            height: calc(100% - 130px); /* Adjusted to fit below navbar and input controls */
            width: 100%;
@@ -87,7 +78,6 @@
    </style>
 </head>
 <body>
-
 
    <ul id="navbar">
        <li class="home">
@@ -102,7 +92,6 @@
        </div>
    </ul>
 
-
    <div class="controls-container">
        <input id="start" type="text" placeholder="Choose Starting Point">
        <input id="end" type="text" placeholder="Choose Destination">
@@ -110,13 +99,18 @@
            <strong>Distance:</strong> <span id="distance">N/A</span>,
            <strong>Duration:</strong> <span id="duration">N/A</span>
        </span>
+       <div>
+           <input type="checkbox" id="primaryRouteCheckbox" checked> Show Primary Route
+           <input type="checkbox" id="alternateRouteCheckbox" checked> Show Alternate Route
+       </div>
    </div>
-
 
    <div id="map"></div>
 
-
+   <!-- Load Google Maps API first -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkRAXLP9mdKxj7459HpYU-IiLiCXyS2Oc&loading=async&callback=initMap"></script>
+   <!-- Load your script after Google Maps API -->
    <script src="scripts.js"></script>
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkRAXLP9mdKxj7459HpYU-IiLiCXyS2Oc&libraries=places&callback=initMap" async defer></script>
 </body>
 </html>
+
